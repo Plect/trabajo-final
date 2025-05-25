@@ -1,0 +1,375 @@
+/* Estilos generales del cuerpo */
+body {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: whitesmoke;
+    color: #f5f5f5; /* Color de texto claro para el tema claro */
+    transition: background 0.3s ease, color 0.3s ease; /* Transición suave para cambios de tema */
+}
+
+/* Estilos para el encabezado */
+header {
+    padding: 2.5%;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Centra verticalmente los elementos */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* Sombra para el encabezado */
+}
+
+/* Estilos para el logo */
+#logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 3em; /* Bordes redondeados para el logo */
+    box-shadow: 0 0 8px #ffd700; /* Sombra dorada para el logo */
+    border: 2px solid #ffd700; /* Borde dorado para el logo */
+}
+
+/* Ejemplo para listas */
+.main-content ul, .main-content ol {
+    padding-left: 30px; /* Más indentación */
+    margin-bottom: 1em;
+    list-style-type: none;
+
+}
+.main-content li {
+    margin-bottom: 0.5em;
+    line-height: 1.6;
+    color: #000000; /* Asegurar que el texto de la lista sea legible en tema claro */
+}
+/* Estilos específicos para tema oscuro si es necesario */
+body.dark-theme .main-content li {
+    color: #ccc; /* Ajusta el color para el tema oscuro */
+}
+
+
+/* Contenedor de botones en el encabezado */
+.botonHeader {
+    display: flex;
+    gap: 15px; /* Espacio entre los botones */
+    align-items: center; /* Centra verticalmente los elementos */
+    font-size: 1.2em; /* Tamaño de fuente para los botones */
+}
+
+/* Estilos para los enlaces */
+a {
+    text-decoration: none; /* Sin subrayado */
+    color: #fff; /* Color de texto blanco */
+    transition: color 0.3s, background 0.3s; /* Transición suave para hover */
+    padding: 8px 16px;
+    border-radius: 4px; /* Bordes ligeramente redondeados */
+}
+
+/* Efecto hover para los enlaces */
+.pb:hover {
+    color: #ffd700; /* Color dorado al pasar el ratón */
+    background: rgba(255,255,255,0.1); /* Fondo semitransparente al pasar el ratón */
+}
+
+/* Estilos para el botón de cambio de tema */
+#toggle-theme {
+    background: none; /* Sin fondo */
+    border: none; /* Sin borde */
+    font-size: 1.5em; /* Tamaño de fuente grande para el emoji */
+    cursor: pointer; /* Cursor de puntero */
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    color: #ffd700; /* Color del emoji en tema claro */
+}
+
+#toggle-theme:hover {
+    background: rgba(255,255,255,0.1); /* Fondo semitransparente al pasar el ratón */
+}
+
+/* Estilos para la sección principal (hero) */
+.hero-section {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+}
+
+/* Título principal */
+#titulo-principal-aboutme, #titulo-principal { /* Aplicar a ambos IDs si existen */
+    font-size: 3em;
+    color: #ffd700; /* Color dorado para el título */
+    text-shadow: 0 0 10px rgba(255,215,0,0.5); /* Sombra para el título */
+    margin-bottom: 15px;
+}
+
+/* Párrafos dentro de la sección principal */
+.hero-section p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #5f5959; /* Asegurar legibilidad en tema claro */
+}
+
+/* Estilos para el botón de acción (si aplica, no en esta página específica) */
+.action-button {
+    background: linear-gradient(90deg, #00c6ff 0%, #0072ff 100%); /* Degradado azul */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    border-radius: 30px; /* Botón más redondeado */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,114,255,0.3);
+}
+
+.action-button:hover {
+    transform: translateY(-3px); /* Efecto de elevación al pasar el ratón */
+    box-shadow: 0 8px 20px rgba(0,114,255,0.4);
+}
+
+/* Títulos de sección */
+.section-title {
+    font-size: 2em;
+    color: #ffd700;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid rgba(255,215,0,0.3);
+    padding-bottom: 10px;
+    background-color: white;
+    text-align: center;
+}
+
+/* Estilos para la sección "Quién soy?" */
+.about-me-section {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 8px;
+    line-height: 1.6;
+    color: #5f5959; /* Asegurar legibilidad en tema claro */
+}
+
+/* Estilos para el tema oscuro */
+body.dark-theme {
+    background: linear-gradient(135deg, #121212 0%, #212121 100%); /* Fondo más oscuro */
+    color: #e0e0e0; /* Color de texto más claro */
+}
+
+body.dark-theme header {
+    background-color: #1a1a1a;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+body.dark-theme a {
+    color: #e0e0e0;
+}
+
+body.dark-theme a:hover {
+    color: #90ee90; /* Verde claro para hover en tema oscuro */
+    background: rgba(255,255,255,0.05);
+}
+
+body.dark-theme .main-content {
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+body.dark-theme .hero-section,
+body.dark-theme .about-me-section {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+body.dark-theme #titulo-principal-aboutme,
+body.dark-theme #titulo-principal,
+body.dark-theme .section-title {
+    color: #90ee90; /* Verde claro para títulos en tema oscuro */
+    text-shadow: 0 0 10px rgba(144,238,144,0.5);
+}
+
+body.dark-theme .section-title {
+    background-color: black;
+}
+
+body.dark-theme .action-button {
+    background: linear-gradient(90deg, #32cd32 0%, #008000 100%); /* Degradado verde para tema oscuro */
+    box-shadow: 0 5px 15px rgba(50,205,50,0.3);
+}
+
+body.dark-theme .action-button:hover {
+    box-shadow: 0 8px 20px rgba(50,205,50,0.4);
+}
+
+/* Estilos adicionales específicos para aboutme.html */
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Imagen de perfil redonda */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+    margin: 0 auto 20px auto; /* Centrada y con margen inferior */
+    display: block;
+    border: 3px solid #ffd700; /* Borde dorado como el logo */
+    box-shadow: 0 0 10px rgba(255,215,0,0.5);
+}
+.skills-list {
+    list-style-type: none; /* Quitar viñetas por defecto */
+    padding-left: 0;
+}
+.skills-list li {
+    background-color: rgba(255, 255, 255, 0.08);
+    margin-bottom: 8px;
+    padding: 10px;
+    border-radius: 5px;
+    border-left: 5px solid #ffd700; /* Indicador visual */
+}
+body.dark-theme .skills-list li {
+    background-color: rgba(255, 255, 255, 0.04);
+    border-left-color: #90ee90; /* Verde claro en tema oscuro */
+}
+.contact-links a {
+    margin-right: 15px;
+    font-size: 1.1em;
+    color: #ffd700; /* Color dorado para enlaces de contacto */
+    text-decoration: none;
+    display: inline-flex; /* Para alinear icono y texto */
+    align-items: center;
+    margin-bottom: 10px; /* Espacio entre enlaces */
+}
+body.dark-theme .contact-links a {
+    color: #90ee90; /* Verde claro en tema oscuro */
+}
+.contact-links a:hover {
+    text-decoration: underline;
+}
+.contact-links img {
+    width: 24px; /* Iconos de contacto pequeños */
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 8px; /* Más espacio entre icono y texto */
+    border-radius: 4px; /* Ligeramente redondeado para iconos */
+}
+
+/* Estilos para la sección de lema personal */
+.personal-motto-section {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px dashed rgba(255, 215, 0, 0.3);
+    text-align: center;
+}
+
+body.dark-theme .personal-motto-section {
+    border-top-color: rgba(144, 238, 144, 0.3);
+}
+
+.generate-motto-button {
+    background-color: #ffd700; /* Dorado */
+    color: #1a1a2e; /* Texto oscuro */
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.generate-motto-button:hover {
+    background-color: #e0c000; /* Dorado más oscuro al pasar el ratón */
+    transform: translateY(-2px);
+}
+
+.generate-motto-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-theme .generate-motto-button {
+    background-color: #90ee90; /* Verde claro en tema oscuro */
+    color: #1a1a2e;
+}
+
+body.dark-theme .generate-motto-button:hover {
+    background-color: #7acc7a; /* Verde más oscuro al pasar el ratón */
+}
+
+#motto-output {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-style: italic;
+    color: #90ee90; /* Verde claro */
+    background-color: rgba(144, 238, 144, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #90ee90;
+    min-height: 50px; /* Para mantener el espacio */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    word-wrap: break-word; /* Para asegurar que el texto se ajuste */
+    overflow-wrap: break-word;
+}
+
+body.dark-theme #motto-output {
+    color: #90ee90;
+    background-color: rgba(144, 238, 144, 0.1);
+    border: 1px solid #90ee90;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .botonHeader {
+        margin-top: 15px;
+    }
+    .botonHeader a, #toggle-theme {
+        margin: 0 10px;
+    }
+    .main-content {
+        margin: 10px;
+        padding: 15px;
+    }
+    .custom-html-table th, .custom-html-table td {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+    #titulo-principal-aboutme, #titulo-principal {
+        font-size: 2.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .botonHeader {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .botonHeader a, #toggle-theme {
+        margin: 5px 0;
+        width: 80%;
+        text-align: center;
+    }
+    .hero-section h1 {
+        font-size: 1.8em;
+    }
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+    .generate-motto-button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+    #motto-output {
+        font-size: 1em;
+    }
+    #titulo-principal-aboutme, #titulo-principal {
+        font-size: 2em;
+    }
+}
