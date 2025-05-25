@@ -1,6 +1,0 @@
-<!ELEMENT preguntas (pregunta+)>
-<!ELEMENT pregunta (enunciado, opcion+)>
-<!ATTLIST pregunta id ID #REQUIRED>
-<!ELEMENT enunciado (#PCDATA)>
-<!ELEMENT opcion (#PCDATA)>
-<!ATTLIST opcion correcta (si|no) #REQUIRED>
