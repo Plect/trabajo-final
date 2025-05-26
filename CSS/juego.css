@@ -1,0 +1,156 @@
+body {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: whitesmoke;
+    color: #f5f5f5; /* Color de texto claro para el tema claro */
+    transition: background 0.3s ease, color 0.3s ease; /* Transición suave para cambios de tema */
+}
+
+/* Estilos para el encabezado */
+header {
+    padding: 2.5%;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Centra verticalmente los elementos */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* Sombra para el encabezado */
+}
+
+#logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 3em; /* Bordes redondeados para el logo */
+    box-shadow: 0 0 8px #ffd700; /* Sombra dorada para el logo */
+    border: 2px solid #ffd700; /* Borde dorado para el logo */
+}
+
+/* Contenedor de botones en el encabezado */
+.botonHeader {
+    display: flex;
+    gap: 15px; /* Espacio entre los botones */
+    align-items: center; /* Centra verticalmente los elementos */
+    font-size: 1.2em; /* Tamaño de fuente para los botones */
+}
+
+/* Estilos para los enlaces */
+a {
+    text-decoration: none; /* Sin subrayado */
+    color: #fff; /* Color de texto blanco */
+    transition: color 0.3s, background 0.3s; /* Transición suave para hover */
+    padding: 8px 16px;
+    border-radius: 4px; /* Bordes redondeados */
+}
+
+/* Efecto hover para los enlaces */
+.pb:hover {
+    color: #ffd700; /* Color dorado al pasar el ratón */
+    background: rgba(255,255,255,0.1); /* Fondo semitransparente al pasar el ratón */
+}
+
+h1, h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #5f5959;
+}
+
+table {
+    width: 50%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+    color: black;
+}
+th, td {
+    border: 1px solid #cccc;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #aa9090;
+    color: #333;
+}
+
+#respuestas {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+#puntaje{
+    color: #5f5959;
+}
+
+button {
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover:enabled {
+    opacity: 0.9;
+}
+
+.respuesta {
+    background-color: var(--boton);
+    color: white;
+}
+
+.respuesta:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+#anterior, #siguiente {
+    background-color: var(--secundario);
+    color: white;
+    margin-right: 1rem;
+}
+
+#anterior:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Variables por defecto (modo claro) */
+:root {
+    --fondo: #f4f4f4;
+    --texto: #222;
+    --boton: #4CAF50;
+    --secundario: #2196F3;
+}
+
+/* Si el usuario prefiere modo oscuro */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --fondo: #121212;
+        --texto: #f4f4f4;
+        --boton: #388E3C;
+        --secundario: #1565C0;
+    }
+}
+
+body.dark-theme {
+    background: linear-gradient(135deg, #121212 0%, #212121 100%); /* Fondo más oscuro */
+    color: #e0e0e0; /* Color de texto más claro */
+}
+
+#toggle-theme {
+    background: none; /* Sin fondo */
+    border: none; /* Sin borde */
+    font-size: 1.5em; /* Tamaño de fuente grande para el emoji */
+    cursor: pointer; /* Cursor de puntero */
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    color: #ffd700; /* Color del emoji en tema claro */
+}
+
+#toggle-theme:hover {
+    background: rgba(255,255,255,0.1); /* Fondo semitransparente al pasar el ratón */
+}
