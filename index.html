@@ -5,37 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trabajo final</title>
     <link rel="stylesheet" href="./CSS/style.css">
-    <script src="./JS/script.js"></script>
 </head>
 <body>
     <header>
         <div>
-            <a href="index.html"><img src="./IMG/Inventate un nombre para el juego y un logo.png" id="logo" alt="Logo de CyberQuest"></a>
+            <a href="index.html" target="_blank"><img src="./IMG/Inventate un nombre para el juego y un logo.png" id="logo" alt="Logo de CyberQuest"></a>
         </div>
         <div class="botonHeader">
             <a href="juego.html" class="pb">Juego</a>
             <button id="toggle-theme" aria-label="Cambiar tema">🌙</button>
-            <a href="#" class="pb">About me</a>
+            <a href="https://sites.google.com/view/victoraguera" class="pb">About me</a>
         </div>
     </header>
+    <div id="blanco"></div>
     <div class="main-content">
         <div class="hero-section">
             <h1 id="titulo-principal">Trabajo final</h1>
-            <p><b>Bienvenido a CyberQuest, un proyecto hecho con estas tecnologías:</b></p>
-    <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JAVASCRIPT</li>
-        <li>XML</li>
-        <li>DTD</li>
-        <li>XSLT</li>
-    </ul>
+            <p><b>Bienvenido a <i>CyberQuest</i>, un proyecto hecho con estas tecnologías:</b></p>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JAVASCRIPT</li>
+                <li>XML</li>
+                <li>DTD</li>
+                <li>XSLT</li>
+            </ul>
             <button id="contenidoExtenso" class="action-button">Explorar contenido</button>
         </div>
-        <h2 class="section-title">¿Quién soy?</h2>
-        <div class="about-me-section">
-            <p>Soy un apasionado del desarrollo web y estudiante del Kursaal, con interés en la creación de plataformas interactivas. CyberQuest es mi proyecto final para la asignatura de Lenguaje de marca, donde he aplicado tecnologías como HTML, CSS, JavaScript, XML, DTD y XSLT para construir una experiencia dinámica y estructurada. Me gusta explorar nuevas herramientas y mejorar la forma en que la información se presenta en la web. ¡Espero que disfrutes navegando por CyberQuest tanto como yo disfruté creándolo!</p>
+        <h2 class="section-title"><u>¿Quién soy?</u></h2>
+        <div class="quiensoy">
+            <img src="./IMG/421-4219840_soy-png.png" alt="Quien soy?" id="quiensoy">
+            <img src="./IMG/jurassic-jurassic-park.gif" alt="Quien soy?" id="quiensoy">
+            <img src="./IMG/421-4219840_soy-png.png" alt="Quien soy?" id="quiensoy">
         </div>
-    </div>
+        <div class="about-me-section">
+            <p>Soy un apasionado del desarrollo web y estudiante del Kursaal, con interés en la creación de plataformas interactivas. <i>CyberQuest</i> es mi proyecto final para la asignatura de Lenguaje de marca, donde he aplicado tecnologías como HTML, CSS, JavaScript, XML, DTD y XSLT para construir una experiencia dinámica y estructurada. Me gusta explorar nuevas herramientas y mejorar la forma en que la información se presenta en la web. ¡Espero que disfrutes navegando por <i>CyberQuest</i> tanto como yo disfruté creándolo!</p>
+        </div>
+
+        <div class="section-separator">
+            <h2>Interacción con el Usuario</h2>
+            <button id="pedirDatosBtn">Presentarse (Nombre y Edad)</button>
+        </div>
+
+        <div class="section-separator">
+            <h2>Herramientas Útiles</h2>
+            <button id="sumatorioBtn">Realizar Sumatorio</button>
+            <button id="gestorPassBtn">Gestor de Contraseñas</button>
+        </div>
+
+        <div class="section-separator">
+            <h2>Tienda de Ejemplo</h2>
+            <div id="productos-disponibles">
+                <h3>Productos Disponibles</h3>
+                <div class="producto-item" data-nombre="Taza Personalizada" data-precio="9.99">
+                    <p>Taza Personalizada - 9.99€</p>
+                    <button class="add-to-cart">Añadir al Carrito</button>
+                </div>
+                <div class="producto-item" data-nombre="Libreta Ecológica" data-precio="5.50">
+                    <p>Libreta Ecológica - 5.50€</p>
+                    <button class="add-to-cart">Añadir al Carrito</button>
+                </div>
+                <div class="producto-item" data-nombre="Bolígrafo de Bambú" data-precio="2.25">
+                    <p>Bolígrafo de Bambú - 2.25€</p>
+                    <button class="add-to-cart">Añadir al Carrito</button>
+                </div>
+            </div>
+
+            <h3>Tu Carrito</h3>
+            <ul id="lista-carrito">
+                </ul>
+            <p>Total: <span id="total-carrito">0.00</span>€</p>
+            <button id="vaciar-carrito">Vaciar Carrito</button>
+        </div>
+
+        <div class="section-separator">
+            <h2>Regístrate</h2>
+            <form id="registroForm">
+                <p>
+                    <label for="nombreForm">Nombre:</label><br>
+                    <input type="text" id="nombreForm" name="nombreForm" required><span class="error" id="errorNombre"></span>
+                </p>
+                <p>
+                    <label for="apellidos">Apellidos:</label><br>
+                    <input type="text" id="apellidos" name="apellidos" required><span class="error" id="errorApellidos"></span>
+                </p>
+                <p>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required><span class="error" id="errorEmail"></span>
+                </p>
+                <p>
+                    <label for="telefono">Teléfono:</label><br>
+                    <input type="tel" id="telefono" name="telefono"><span class="error" id="errorTelefono"></span>
+                </p>
+                <p>
+                    <label for="password">Contraseña:</label><br>
+                    <input type="password" id="password" name="password" required><span class="error" id="errorPassword"></span>
+                </p>
+                <p>
+                    <label for="verificarPassword">Verificar Contraseña:</label><br>
+                    <input type="password" id="verificarPassword" name="verificarPassword" required><span class="error" id="errorVerificarPassword"></span>
+                </p>
+                <p>
+                    <button type="submit">Enviar Registro</button>
+                </p>
+            </form>
+        </div>
+
+        </div>
+    <script src="./JS/script.js"></script>
 </body>
 </html>

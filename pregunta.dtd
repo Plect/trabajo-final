@@ -1,6 +1,12 @@
-<!ELEMENT preguntas (pregunta+)>
-<!ELEMENT pregunta (enunciado, opcion+)>
-<!ATTLIST pregunta id ID #REQUIRED>
+<!ELEMENT root (preguntas)> <!ELEMENT preguntas (pregunta+)>
+<!ATTLIST preguntas tema CDATA #IMPLIED version CDATA "1.0" #FIXED >
+
+<!ELEMENT pregunta (enunciado, respuesta+, comentario?)> 
+<!ATTLIST pregunta id ID #REQUIRED tipo CDATA #IMPLIED >
+
 <!ELEMENT enunciado (#PCDATA)>
-<!ELEMENT opcion (#PCDATA)>
-<!ATTLIST opcion correcta (si|no) #REQUIRED>
+<!ELEMENT respuesta (#PCDATA)>
+<!ATTLIST respuesta correcta (sí|no) #REQUIRED>
+
+<!ELEMENT comentario ANY>
+<!ATTLIST referenciaPregunta refId IDREF #REQUIRED >

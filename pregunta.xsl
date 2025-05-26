@@ -32,6 +32,7 @@
             <body>
                 <h1>Preguntas y Respuestas</h1>
                 <xsl:for-each select="//pregunta">
+                    <xsl:sort select="@id" data-type="number"/>
                     <table>
                         <tr>
                             <th colspan="4"> <xsl:value-of select="enunciado"/>
